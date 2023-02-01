@@ -8,7 +8,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-//Sorry about the strange tabbing! Not sure what caused that, and I wasn't able to fix it in an efficient manner.
 /* Use 16-bit code words */
 #define NUM_CODES 4096 //changes
 
@@ -133,7 +132,8 @@ void write_code(FILE* fd, char *dictionary[], char *s)
         	printf("Algorithm error!\n");
         	exit(1);
 	}
-
+	
+	//if we reach the end
 	if (pword == NUM_CODES)
 	{
 		pword = actual_code;
